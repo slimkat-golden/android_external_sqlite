@@ -109,7 +109,7 @@ extern "C" {
 */
 #define SQLITE_VERSION        "3.7.11"
 #define SQLITE_VERSION_NUMBER 3007011
-#define SQLITE_SOURCE_ID      "2015-05-21 02:24:35 000197cc4e3874711388d79d9ad5af6f0aba6cf9"
+#define SQLITE_SOURCE_ID      "2017-07-21 07:56:09 8201f4e1c566f7223c71c07e6b703d1352801f1b2daa0fd00895a18e1944cb4d"
 
 /*
 ** CAPI3REF: Run-Time Library Version Numbers
@@ -3950,6 +3950,7 @@ SQLITE_API int sqlite3_value_bytes16(sqlite3_value*);
 SQLITE_API double sqlite3_value_double(sqlite3_value*);
 SQLITE_API int sqlite3_value_int(sqlite3_value*);
 SQLITE_API sqlite3_int64 sqlite3_value_int64(sqlite3_value*);
+SQLITE_API void *sqlite3_value_pointer(sqlite3_value*);
 SQLITE_API const unsigned char *sqlite3_value_text(sqlite3_value*);
 SQLITE_API const void *sqlite3_value_text16(sqlite3_value*);
 SQLITE_API const void *sqlite3_value_text16le(sqlite3_value*);
@@ -4207,6 +4208,7 @@ SQLITE_API void sqlite3_result_error_code(sqlite3_context*, int);
 SQLITE_API void sqlite3_result_int(sqlite3_context*, int);
 SQLITE_API void sqlite3_result_int64(sqlite3_context*, sqlite3_int64);
 SQLITE_API void sqlite3_result_null(sqlite3_context*);
+SQLITE_API void sqlite3_result_pointer(sqlite3_context*, void*);
 SQLITE_API void sqlite3_result_text(sqlite3_context*, const char*, int, void(*)(void*));
 SQLITE_API void sqlite3_result_text16(sqlite3_context*, const void*, int, void(*)(void*));
 SQLITE_API void sqlite3_result_text16le(sqlite3_context*, const void*, int,void(*)(void*));
